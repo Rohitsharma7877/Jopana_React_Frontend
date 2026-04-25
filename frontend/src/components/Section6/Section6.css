@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --sec6-bg-main: #f4f8fb;        /* Page background */
+  --sec6-white: #ffffff;
+  
+  /* JOPANA Brand Colors */
+  --sec6-jopana-dark: #273b47;    /* Banner background */
+  --sec6-jopana-teal: #15a083;    /* Primary accents and buttons */
+  --sec6-jopana-orange: #de7223;  /* Badges */
+  
+  --sec6-text-gray: #7a8a9e;
+  --sec6-input-bg: #f8fafc;       /* Light gray for input fields */
+}
+
+.sec6-section {
+  background-color: var(--sec6-bg-main);
+  font-family: 'Montserrat', sans-serif;
+  /* Add padding to the bottom so the section breathes below the box */
+  padding-bottom: 80px; 
+}
+
+.sec6-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- DARK BANNER AREA --- */
+.sec6-dark-banner {
+  background-color: var(--sec6-jopana-dark);
+  /* Extra padding at the bottom gives room for the overlapping white box */
+  padding: 60px 0 100px 0; 
+}
+
+.sec6-banner-content {
+  display: flex;
+  justify-content: space-between;
+  /* Aligning to flex-end ensures the image "stands" on the bottom edge */
+  align-items: flex-end; 
+  gap: 50px;
+}
+
+.sec6-text-area {
+  flex: 1.2;
+  color: var(--sec6-white);
+  padding-bottom: 30px; /* Aligns text visually with the image */
+}
+
+.sec6-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--sec6-jopana-orange); /* Brand Orange */
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(222, 114, 35, 0.3);
+}
+
+.sec6-badge-icon{
+  color: var(--sec8-jopana-teal);
+  gap: 5px;
+}
+
+.sec6-heavy-heading {
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+.sec6-text-teal {
+  color: var(--sec6-jopana-teal); /* Brand Teal */
+}
+
+.sec6-paragraph {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #c4d2df; /* Light grayish-blue for readability on dark */
+  margin-bottom: 35px;
+  max-width: 500px;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+
+/* Banner Buttons */
+.sec6-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.sec6-btn-primary {
+  background-color: var(--sec6-jopana-teal);
+  color: var(--sec6-white);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sec6-btn-primary:hover {
+  background-color: #11826a;
+}
+
+.sec6-btn-outline {
+  background: transparent;
+  color: var(--sec6-white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.sec6-btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--sec6-white);
+}
+
+.sec6-phone-icon {
+  color: var(--sec6-jopana-teal);
+}
+
+/* Banner Image */
+.sec6-image-area {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.sec6-doctors-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px; /* Prevents the image from getting too huge */
+  display: block;
+  /* Pulls the image down slightly so it overlaps perfectly with the white box */
+  margin-bottom: -50px; 
+}
+
+
+/* --- OVERLAPPING APPOINTMENT BOX --- */
+.sec6-appointment-box {
+  background-color: var(--sec6-white);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(39, 59, 71, 0.1); /* Subtle dark slate shadow */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  z-index: 10;
+  /* MAGIC TRICK: Pulls the box UP over the dark banner */
+  margin-top: -60px; 
+}
+
+.sec6-box-text {
+  flex: 0.8;
+}
+
+.sec6-box-text h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--sec6-jopana-dark);
+  margin: 0 0 10px 0;
+}
+
+.sec6-box-text p {
+  font-size: 13px;
+  color: var(--sec6-text-gray);
+  margin: 0;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+
+/* The Form Grid */
+.sec6-booking-form {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.sec6-input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid #e1e8ed;
+  background-color: var(--sec6-input-bg);
+  color: var(--sec6-jopana-dark);
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't break grid width */
+}
+
+.sec6-input:focus {
+  border-color: var(--sec6-jopana-teal);
+}
+
+.sec6-btn-submit {
+  background-color: var(--sec6-jopana-teal);
+  color: var(--sec6-white);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.sec6-btn-submit:hover {
+  background-color: #11826a;
+}

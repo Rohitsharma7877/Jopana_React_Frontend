@@ -1,0 +1,258 @@
+:root {
+  --sec2-bg-light: #f4f8fb;        
+  --sec2-white: #ffffff;
+  --sec2-jopana-dark: #273b47;    
+  --sec2-jopana-teal: #15a083;    
+  --sec2-text-gray: #6b7c8f;      
+}
+
+.srv-wrapper {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.srv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================
+   TOP HEADER SECTION
+   ========================================= */
+.srv-header-section {
+  background-color: var( --sec2-white);
+  padding: 60px 0 40px; 
+}
+
+.srv-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 30px;
+}
+
+.srv-title-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.srv-title-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.srv-back-btn {
+  background: none;
+  border: none;
+  color: var(--sec2-jopana-dark);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.srv-back-btn:hover {
+  transform: translateX(-4px); 
+}
+
+.srv-heading {
+  font-size: 36px; 
+  font-weight: 800;
+  color: var(--sec2-jopana-dark);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.srv-subtitle {
+  font-size: 15px;
+  color: var(--sec2-text-gray);
+  margin: 8px 0 0 39px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+
+.srv-search-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--sec2-bg-light);
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.srv-search-icon {
+  color: var(--sec2-jopana-dark);
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+.srv-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  margin-left: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: var(--sec2-jopana-dark);
+}
+
+.srv-search-input::placeholder {
+  color: #a0aec0;
+}
+
+/* =========================================
+   BOTTOM SLIDER SECTION
+   ========================================= */
+.srv-slider-section {
+  background-color: var(--sec2-bg-light);
+  padding: 60px 0 80px; 
+}
+
+.srv-relative-container {
+  position: relative; /* Anchors the absolute positioned arrows */
+}
+
+/* The horizontal scrolling track */
+.srv-slider-track {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  
+  padding-bottom: 20px; /* Gives room for shadow/hover effect */
+  
+  /* Hide the ugly default scrollbar */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.srv-slider-track::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Cursor states for dragging */
+.srv-slider-track { cursor: grab; }
+.srv-slider-track.is-dragging { 
+  cursor: grabbing; 
+  scroll-behavior: auto; /* Turn off smooth scroll while dragging so it sticks to mouse */
+}
+
+/* Individual Cards */
+.srv-card {
+  flex: 0 0 auto;
+  width: 170px; /* Locks the width so they don't squish */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  user-select: none; /* Prevents text highlighting while dragging */
+}
+
+/* Disable pointer events on the image wrapper so dragging works smoothly */
+.srv-card-img-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--sec2-bg-light);
+  margin-bottom: 15px;
+  pointer-events: none; 
+}
+
+.srv-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* We put the hover effect on the whole card so it triggers easily */
+.srv-card:hover .srv-card-img {
+  transform: scale(1.05);
+}
+
+.srv-card-title {
+  font-size: 13px; 
+  font-weight: 600;
+  color: var(--sec2-jopana-dark);
+  margin: 0;
+  line-height: 1.4;
+  white-space: pre-line; 
+}
+
+/* =========================================
+   NAVIGATION ARROWS
+   ========================================= */
+.srv-nav-btn {
+  position: absolute;
+  top: calc(50% - 10px); /* Center vertically minus padding */
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--sec2-white);
+  border: 1px solid #E5E7EB;
+  color: var(--sec2-jopana-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
+
+.srv-nav-btn:hover {
+  color: var(--sec2-jopana-teal);
+  border-color: var(--sec2-jopana-teal);
+  background-color: var(--sec2-bg-light);
+}
+
+.srv-nav-left {
+  left: -20px; /* Hangs slightly outside the container */
+}
+
+.srv-nav-right {
+  right: -20px;
+}
+
+/* =========================================
+   RESPONSIVE QUERIES
+   ========================================= */
+@media (max-width: 768px) {
+  .srv-header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .srv-search-box {
+    max-width: 100%;
+  }
+
+  .srv-subtitle {
+    margin-left: 0; 
+    margin-top: 15px;
+  }
+  
+  /* Hide the arrows on smaller screens since dragging/swiping is easier */
+  .srv-nav-btn {
+    display: none; 
+  }
+}
+
+@media (max-width: 480px) {
+  .srv-heading {
+    font-size: 28px;
+  }
+  .srv-card {
+    width: 140px; /* Slightly smaller cards on phones */
+  }
+}
