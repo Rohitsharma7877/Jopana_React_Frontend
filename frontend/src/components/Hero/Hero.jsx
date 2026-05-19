@@ -5,16 +5,11 @@ import DoctorImage from '../assets/doct3.jpg'; // Ensure this path is correct
 const Hero = () => {
   return (
     <>
-      {/* Import Poppins Font globally for this component */}
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
-      `}</style>
-
-      {/* Main Wrapper - Applied Poppins Font Here */}
-      <div className="bg-[#eef5ff] pb-[40px] md:pb-[80px] font-['Poppins',sans-serif]">
+      {/* Main Wrapper - Cleaned up redundant font classes */}
+      <div className="bg-[#eef5ff] pb-[40px] md:pb-[80px]">
         
-        {/* Top Section */}
-        <div className="bg-[#ffffff] pt-[80px] md:pt-[70px] pb-[50px] md:pb-[100px] relative overflow-hidden rounded-bl-[40px] rounded-br-[40px] md:rounded-bl-[80px] md:rounded-br-[80px]">
+        {/* Top Section - pt-[120px] lg:pt-[150px] ensures it clears the fixed navbar */}
+        <div className="bg-[#ffffff] pt-[120px] lg:pt-[150px] pb-[50px] md:pb-[100px] relative overflow-hidden rounded-bl-[40px] rounded-br-[40px] md:rounded-bl-[80px] md:rounded-br-[80px]">
           <div className="max-w-[1200px] mx-auto px-[20px] relative">
             <div className="flex flex-col md:flex-row justify-between items-center gap-[40px] md:gap-[50px]">
               
