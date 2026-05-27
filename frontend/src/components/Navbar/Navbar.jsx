@@ -351,14 +351,14 @@ const Navbar = () => {
               <FaPhoneAlt className="text-[#008080] bg-white p-[10px] w-[34px] h-[34px] rounded-full shadow-[0_2px_5px_rgba(0,0,0,0.1)]" />
               <div>
                 <p className="text-[12px] text-[#666] m-0">Phone Number</p>
-                <p className="text-[14px] font-bold m-0">+123 456 789</p>
+                <p className="text-[14px] font-bold m-0">+91 897 154 8886</p>
               </div>
             </div>
             <div className="flex items-center gap-[10px]">
               <FaEnvelope className="text-[#008080] bg-white p-[10px] w-[34px] h-[34px] rounded-full shadow-[0_2px_5px_rgba(0,0,0,0.1)]" />
               <div>
                 <p className="text-[12px] text-[#666] m-0">Email Address</p>
-                <p className="text-[14px] font-bold m-0">info@jopana.com</p>
+                <p className="text-[14px] font-bold m-0">support@jopana.in</p>
               </div>
             </div>
             <button className="bg-[#ff8c00] text-white border-none py-[8px] px-[18px] text-[13px] rounded-[20px] font-semibold cursor-pointer transition-all duration-300 hover:bg-[#e67e00] shrink-0">
@@ -373,7 +373,7 @@ const Navbar = () => {
               <li className="flex"><NavLink to="/" end className={getNavLinkClass}>HOME</NavLink></li>
               <li className="flex"><NavLink to="/services" className={getNavLinkClass}>SERVICES</NavLink></li>
               <li className="flex"><NavLink to="/booking" className={getNavLinkClass}>BOOKING</NavLink></li>
-              <li className="flex"><NavLink to="/about" className={getNavLinkClass}>ABOUT US</NavLink></li>          
+              <li className="flex"><NavLink to="/rapid" className={getNavLinkClass}>RAPID</NavLink></li>          
               
               
               

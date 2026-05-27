@@ -1,8 +1,12 @@
 import React from 'react'
-import Service1 from '../Services/Service1'
+
 import AIBanner from '../AIBoat/AIBanner'
 import MedicalService from '../MedicalService/MedicalService'
 import Nursing from '../MedicalService/Nursing'
+import HomeAssistance from '../MedicalService/HomeAssistance'
+import MotherChildCare from '../MedicalService/MotherChildCare'
+import ServiceBlog from '../MedicalService/ServiceBlog'
+import Service1 from '../MedicalService/Service1'
 // import Service from '../Product/Product1'
 
 const ServicesPage = () => {
@@ -12,6 +16,9 @@ const ServicesPage = () => {
       <AIBanner/>
       <MedicalService/>
       <Nursing/>
+      <HomeAssistance/>
+      <MotherChildCare/>
+      <ServiceBlog/>
     </>
   )
 }

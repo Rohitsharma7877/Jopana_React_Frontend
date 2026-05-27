@@ -16,7 +16,7 @@ import jopanaLogo from '../assets/jopanaLogo.png';
 
 const Footer = () => {
   return (
-    <footer className="mt-[50px]">
+    <footer className=" ">
       
       {/* Top Teal Newsletter Banner */}
       <div className="bg-[#15a083] pt-[40px] pb-[60px] lg:pb-[80px] text-[#ffffff]">

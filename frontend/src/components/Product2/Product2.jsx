@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar, FaUsers, FaRobot } from "react-icons/fa";
+import AIBanner from '../AIBoat/AIBanner';
 
 // --- IMPORT YOUR LOCAL IMAGES HERE ---
 import doctorImg from "../assets/Jimg1.jpeg";
@@ -238,26 +239,7 @@ const Product2 = () => {
         </div>
 
         {/* --- BOTTOM ROW: Wide AI Banner --- */}
-        <div className="w-full lg:w-[90%] mx-auto bg-gradient-to-br from-[#107e66] to-[#15a083] rounded-[16px] py-[35px] px-[30px] lg:px-[50px] text-[#ffffff] relative overflow-hidden shadow-[0_15px_30px_rgba(21,160,131,0.2)]">
-          <div className="relative z-[2] w-full lg:max-w-[50%] text-left">
-            <h2 className="m-0 mb-[12px] text-[22px] lg:text-[26px] font-[800]">AI Health Assistant</h2>
-            <p className="m-0 mb-[20px] text-[14px] leading-[1.6] text-[rgba(255,255,255,0.9)]">
-              Not sure what care you need? Describe your symptoms and get care
-              recommendations instantly.
-            </p>
-            <button 
-              className="bg-[#ffffff] text-[#15a083] border-none py-[12px] px-[20px] rounded-[8px] font-[800] text-[13px] cursor-pointer flex items-center gap-[8px] transition-all duration-200 hover:-translate-y-[2px] hover:shadow-[0_5px_15px_rgba(0,0,0,0.1)]" 
-              onClick={triggerAIBot}
-            >
-              <FaRobot className="text-[16px]" /> Start Health Check
-            </button>
-          </div>
-
-          {/* Decorative Circles */}
-          <div className="absolute right-[-80px] top-[-80px] w-[300px] h-[300px] bg-[rgba(255,255,255,0.1)] rounded-full z-[1]"></div>
-          <div className="absolute right-[150px] bottom-[-50px] w-[150px] h-[150px] bg-[rgba(255,255,255,0.05)] rounded-full z-[1]"></div>
-          <div className="absolute left-[45%] top-[-30px] w-[80px] h-[80px] bg-[rgba(255,255,255,0.05)] rounded-full z-[1]"></div>
-        </div>
+        <AIBanner compact={true} />
         
       </section>
     </>

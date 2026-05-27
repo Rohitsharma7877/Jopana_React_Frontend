@@ -1,12 +1,11 @@
 import React from 'react';
-import './Section5.css';
 import { FaHeart } from 'react-icons/fa';
 
-// Placeholder images - Replace with your actual paths!
-import process1 from './dt1.jpeg'; 
-import process2 from './dt2.jpeg';
-import process3 from './dt3.jpg';
-import process4 from './dt6.png';
+// Placeholder images - Ensure paths match your project
+import process1 from '../assets/Jimg6.jpeg'; 
+import process2 from '../assets/Jimg7.jpeg';
+import process3 from '../assets/Jimg8.jpeg';
+import process4 from '../assets/Jimg11.jpeg';
 
 const Section5 = () => {
   const processData = [
@@ -37,38 +36,57 @@ const Section5 = () => {
   ];
 
   return (
-    <section className="sec5-section">
-      <div className="sec5-container">
+    <section className="bg-[#f4f8fb] py-[60px]">
+      <div className="max-w-[1200px] mx-auto px-[20px]">
         
         {/* Header Area */}
-        <div className="sec5-header-area">
-          <div className="sec5-badge">
-            <FaHeart className="sec5-badge-icon" /> HOW IT WORKS
+        <div className="flex flex-col items-center text-center mb-[40px]">
+          <div className="inline-flex items-center gap-[8px] bg-[#ffffff] text-[#de7223] py-[6px] px-[16px] rounded-[20px] text-[11px] font-[800] uppercase tracking-[1.5px] mb-[15px] shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
+            <FaHeart className="text-[13px]" /> HOW IT WORKS
           </div>
-          <h2 className="sec5-heavy-heading">
-            <span className="sec5-text-dark">Simple Process We</span> <br />
-            <span className="sec5-text-teal">Follow For Medical Care</span>
+          <h2 className="text-[32px] md:text-[36px] font-[900] leading-[1.2] m-0">
+            <span className="text-[#273b47]">Simple Process We</span> <br />
+            <span className="text-[#15a083]">Follow For Medical Care</span>
           </h2>
         </div>
 
         {/* Process Steps Area */}
-        <div className="sec5-process-wrapper">
-          {/* The dotted connecting line */}
-          <div className="sec5-connecting-line"></div>
+        <div className="relative mt-[20px] lg:mt-0">
+          
+          {/* The dotted connecting line (Hidden on mobile/tablet, visible on desktop) */}
+          <div className="hidden lg:block absolute top-[75px] left-[10%] right-[10%] h-[2px] border-t-[2px] border-dashed border-[#cbd6e2] z-[1]"></div>
 
-          <div className="sec5-steps-grid">
+          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start relative z-[2] gap-[40px] lg:gap-[20px]">
             {processData.map((step, index) => (
-              <div className="sec5-step-item" key={index}>
+              
+              // Added "group" class here to trigger the hover effect on the child elements
+              <div className="group flex-1 flex flex-col items-center text-center" key={index}>
                 
                 {/* Image and Number Badge */}
-                <div className="sec5-hexagon-wrapper">
-                  <div className="sec5-step-number">{step.id}</div>
-                  <img src={step.image} alt={step.title} className="sec5-hexagon-img" />
+                <div className="relative inline-block w-[140px] h-[155px] mb-[20px] z-[1] transition-transform duration-300 group-hover:scale-105">
+                  
+                  {/* Layer 1: Thick Outer Border (#cbd6e2) */}
+                  <div className="absolute top-0 left-0 w-full h-full bg-[#cbd6e2] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] scale-110 -z-[2]"></div>
+                  
+                  {/* Layer 2: The Background Gap (#f4f8fb) */}
+                  <div className="absolute top-0 left-0 w-full h-full bg-[#f4f8fb] [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] scale-105 -z-[1]"></div>
+                  
+                  {/* Layer 3: The Actual Image */}
+                  <img src={step.image} alt={step.title} className="relative block w-full h-full object-cover [clip-path:polygon(50%_0%,100%_25%,100%_75%,50%_100%,0%_75%,0%_25%)] z-[1]" />
+                  
+                  {/* The Number Badge */}
+                  <div className="absolute top-[-18px] left-1/2 -translate-x-1/2 w-[32px] h-[32px] bg-[#15a083] text-[#ffffff] rounded-full flex justify-center items-center text-[12px] font-[800] z-[3] border-[4px] border-[#f4f8fb]">
+                    {step.id}
+                  </div>
                 </div>
                 
                 {/* Text Content */}
-                <h3 className="sec5-step-title">{step.title}</h3>
-                <p className="sec5-step-desc">{step.desc}</p>
+                <h3 className="text-[16px] font-[800] text-[#273b47] m-0 mb-[8px] max-w-[180px] leading-[1.3]">
+                  {step.title}
+                </h3>
+                <p className="text-[12px] text-[#7a8a9e] leading-[1.6] m-0 max-w-[200px] font-['Segoe_UI',Tahoma,Geneva,sans-serif]">
+                  {step.desc}
+                </p>
                 
               </div>
             ))}
